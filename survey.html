@@ -108,10 +108,33 @@
   </select>
 </div>
 
+<br>
+
+<button type ="button" id="submit" class="btn btn-lg btn-info"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>
 
 
 
 
+
+
+<script>
+
+$("#submit").on("click",function(){
+
+
+
+var userData = {
+name: $("#name").val().trim(),
+photo:$("#photo").val().trim(),
+scores:[$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val()]
+}
+
+console.log(userData)
+})
+
+
+
+</script>
 
 
 
