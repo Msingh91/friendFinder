@@ -129,10 +129,13 @@ photo:$("#photo").val().trim(),
 scores:[$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val()]
 }
 
-console.log(userData)
+ $.post("/api/new", userData)
+      .done(function(data) {
+        console.log(data);
+        alert("Adding friend...");
+      });
+
 })
-
-
 
 </script>
 
